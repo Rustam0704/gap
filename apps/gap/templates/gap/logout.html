@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Log out page{% endblock %}
+{% block body %}
+
+    <form style="text-align: center" method="post">
+        {% csrf_token %}
+        Are You Sure Log out
+        <a>
+            <button type="submit">Yes</button>
+        </a>
+
+    </form>
+     <a href="{% url 'gap:login-page' %}">
+            <button> No</button>
+        </a>
+{% endblock %}
